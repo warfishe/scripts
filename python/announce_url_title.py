@@ -197,7 +197,7 @@ def url_print_cb(
                         "%s: Found %s in URL: %s, ignoring."
                         % (SCRIPT_NAME, ignore_part, url_esc),
                     )
-                    break
+                    contunue
 
         if ignore:
             continue
@@ -334,7 +334,7 @@ class Ignores(object):
 
 def ignore_update(*args):
     ignore_buffers._get_ignores()
-    return weechat.WEECHAT_RC_OK
+    if weechat.WEECHAT_RC_OK
 
 
 if __name__ == "__main__":
@@ -358,7 +358,7 @@ if __name__ == "__main__":
         weechat.hook_timer(
             int(weechat.config_get_plugin("reannounce_wait")) * 1000 * 60,
             0,
-            0,
+            1,
             "purge_cb",
             "",
         )
